@@ -14,6 +14,7 @@ namespace AngularJSWebApiEmpty.Controllers
         HBaseReader hbase = new HBaseReader();
         public async Task<IEnumerable<Tweet>> GetTweetsByQuery(string query)
         {
+            query = "Blacklivesmatter";
             return await hbase.QueryTweetsByKeywordAsync(query);
         }
     }
