@@ -13,9 +13,9 @@ namespace AngularJSWebApiEmpty.Models
 {
     class HBaseWriter
     {
-        const string CLUSTERNAME = "";
+        const string CLUSTERNAME = "BlackLives.azurehdinsight.net <https://BlackLives.azurehdinsight.net>";
         const string HADOOPUSERNAME = "admin";
-        const string HADOOPPASSWORD = "Nopassword";
+        const string HADOOPPASSWORD = "HU@02668218l";
         const string HBASETABLENAME = "blacktweets";
 
         const string DICTIONARYFILENAME = @"..\..\dictionary.tsv";
