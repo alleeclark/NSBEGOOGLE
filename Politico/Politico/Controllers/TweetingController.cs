@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace AngularJSWebApiEmpty.Controllers
 {
-    public class TweetingController : TweetingController
+    public class TweetingController : ApiController
     {
         HBaseReader hbase = new HBaseReader();
         public async Task<IEnumerable<Tweet>> GetTweetsByQuery(string query)
