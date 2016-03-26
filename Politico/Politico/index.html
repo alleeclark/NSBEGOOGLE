@@ -1,14 +1,112 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Alanna is my friend</title>
-   
-</head>
-<body ng-app="app">
-    <h1>Alanna is my friend</h1>
-    <script src="Scripts/angular.js"></script>
-    <script src="Scripts/angular-animate.js"></script>
-    <script src="Scripts/angular-route.js"></script>
-    <script src="App/app.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="blackTweetsApp"  ng-controller="mainController">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>#BlackTweetsMatter</title>
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+		<!-- Google Style Dependencies -->
+	    <link href='https://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+
+	    <!-- Font Awesome Icons -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<script src="js/modernizr.custom.js"></script>
+
+		 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+		<link href="style.less" rel="stylesheet" type="text/less"></link>
+
+
+	</head>
+	<body>
+		<div class="presentation">
+    
+      		<i class="fa fa-flag" style="margin-right: 15px;"></i> 
+
+      		What does Twitter think about
+
+        	<div class="nl-field" ng-class="{'nl-field-open': candidateOpen}">
+          		<a class="toggle" ng-click="toggleCandidateOpen()">
+          			{{ currentItemCandidates }}
+          		</a>
+          		<ul>
+            		<li ng-repeat="(key, value) in candidates" ng-click="toggleCandidateOpen(key)" ng-class="{ checked: candidate == value }">
+            			{{ value }}
+            		</li>
+          		</ul>
+        	</div>
+        	
+        	<div class="nl-overlay"></div>
+
+
+      		and 
+      		<div class="nl-field" ng-class="{'nl-field-open': tagOpen}">
+          	<a class="toggle" ng-click="toggleTagOpen()">
+          		{{ currentHashtags }}
+          	</a>
+          		<ul>
+            		<li ng-repeat="(key, value) in hashtags" ng-click="toggleTagOpen(key)" ng-class="{ checked: hashtags == value }">
+            			{{ value }}
+            		</li>
+          		</ul>
+        	</div>
+        	,
+
+        	<div class="nl-field" ng-class="{'nl-field-open': timeOpen}">
+          	<a class="toggle" ng-click="toggleTime()">
+          		{{ currentTime }}
+          	</a>
+          		<ul>
+            		<li ng-repeat="(key, value) in time" ng-click="toggleTime(key)" ng-class="{ checked: time == value }">
+            			{{ value }}
+            		</li>
+          		</ul>
+        	</div>
+      		
+      		?
+
+      		<br>
+
+      		<button class="md-raised md-primary btn-custom be-shortcode mediumbtn be-button rounded md-button md-default-theme" ng-transclude="" style="border: 3px solid #ffffff; color: #ffffff; min-height: 0px; min-width: 0px; line-height: 11px; margin-top: 25px; margin-left: auto; margin-right: 0px; padding: 20px; letter-spacing: 3px; font-weight: bold; font-size: 14px; transition: all 0.3s linear 0s; background-color: rgba(36, 36, 36, 0.701961); z-index:0; text-align: right;
+    		margin-left: 75%;" ng-click="changeview('/Customize')" tabindex="0">
+    		<span class="ng-scope">
+    			GO!
+    		</span>
+    		<div class="md-ripple-container">
+    		</div>
+    		</button>
+
+    	</div>
+
+    	
+
+
+		<script src="js/classie.js"></script>
+		<!-- jQuery -->
+	    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <!-- Bootstrap JS -->
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	    <!-- Angular Material Dependencies -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.min.js"></script>
+
+	    <!-- Firebase -->
+	    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	    <!-- AngularFire -->
+	    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+
+	    
+	    <script type="text/javascript" src="app.js"></script>
+	    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+	</body>
 </html>
