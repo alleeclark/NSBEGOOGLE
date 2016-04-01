@@ -12,10 +12,10 @@ namespace Politico
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
-        const string TWITTERAPPACCESSTOKEN = "<Enter Twitter App Access Token>";
-        const string TWITTERAPPACCESSTOKENSECRET = "<Enter Twitter Access Token Secret>";
-        const string TWITTERAPPAPIKEY = "<Enter Twitter App API Key>";
-        const string TWITTERAPPAPISECRET = "<Enter Twitter App API Secret>";
+        const string TWITTERAPPACCESSTOKEN = "4247602527-6YiPquogfC1zbNa1tS7nvnALkRzQJ37S8TqlMs8";
+        const string TWITTERAPPACCESSTOKENSECRET = " Z3yvPPieLWrEkEYvhy882hCEttXlhfpM7O6sXz6PBlUiu";
+        const string TWITTERAPPAPIKEY = " G14oacGN55sEjZQJP0jpsIEsP";
+        const string TWITTERAPPAPISECRET = " Htm3LwLCblNPLuQDyUyNhMeMRlyz7ekj8oGRtYEtM3StliGe61";
         protected void Application_Start()
         {
             Auth.SetUserCredentials(TWITTERAPPAPIKEY, TWITTERAPPAPISECRET, TWITTERAPPACCESSTOKEN, TWITTERAPPACCESSTOKENSECRET);
