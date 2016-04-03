@@ -47,7 +47,7 @@
                 {{currentItemCandidates}}
             </a>
             <ul>
-                <li ng-repeat="(key, value) in candidates" ng-click="toggleCandidateOpen(key)" ng-class="{ checked: candidate == value }">
+                <li ng-repeat= "value in candidates" ng-click="toggleCandidateOpen(key)" ng-class="{ checked: candidate == value }">
                     {{ value }}
                 </li>
             </ul>

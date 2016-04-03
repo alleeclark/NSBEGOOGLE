@@ -1,7 +1,7 @@
 ﻿var app = angular.module('blackTweetsApp', [
     'ngRoute',
     'ngMaterial',
-])
+]);
 
 
 //Making the checkboxes Burgundy in AngularMaterial
